@@ -147,7 +147,7 @@ $(document).ready(function () {
           this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
-        var target = $(this.hash);
+        let target = $(this.hash);
         target = target.length
           ? target
           : $("[name=" + this.hash.slice(1) + "]");
@@ -167,10 +167,10 @@ $(document).ready(function () {
   //ajax form
   $(function () {
     // Get the form.
-    var form = $("#ajax-contact");
+    let form = $("#ajax-contact");
 
     // Get the messages div.
-    var formMessages = $("#form-messages");
+    let formMessages = $("#form-messages");
 
     // Set up an event listener for the contact form.
     $(form).submit(function (e) {
@@ -178,7 +178,7 @@ $(document).ready(function () {
       e.preventDefault();
 
       // Serialize the form data.
-      var formData = $(form).serialize();
+      let formData = $(form).serialize();
 
       // Submit the form using AJAX.
       $.ajax({
